@@ -6,6 +6,19 @@ DeepSeek Harness already accepts file drags that come from the operating system,
 
 ![Dragging install.sh from the Files pane and dropping it into the sentence](docs/demo.gif)
 
+## Do you need this?
+
+Watch the clip above before installing anything. The plugin only changes one thing:
+it lets a file in the right-hand **Files** tab become something you can drop into
+the middle of a sentence.
+
+- You keep material in the workspace and refer to it by path while writing → you
+  will use this every day.
+- You paste code inline, or never open the Files tab → skip it. Nothing else in the
+  app changes, and there is nothing to configure.
+
+**Repository and releases:** <https://github.com/JiayuREN1127/dsh-file-drag>
+
 ## Requirements
 
 - DeepSeek Harness **0.2.1-rc.2** or a build that still renders the right sidebar Files tab.
