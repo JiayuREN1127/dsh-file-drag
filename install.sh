@@ -26,7 +26,7 @@ else
   cp "$PATCH" "$PATCH.bak-$(date +%Y%m%d%H%M%S)"
   cat >> "$PATCH" <<'YAML'
 - insert:
-    - id: file-drag
+    - id: dsh-file-drag
       name: dsh-file-drag
 YAML
   echo "appended loader row to $PATCH (backup kept next to it)"

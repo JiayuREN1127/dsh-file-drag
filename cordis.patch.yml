@@ -1,0 +1,9 @@
+# dsh-file-drag bundle patch: one row, no configuration.
+# The row name MUST equal the package name — the client-modules node half
+# resolves `require.resolve('<row-name>/package.json')` to find the package.
+#
+# Install with the plugin manager:
+#   dsh plugin --profile desktop add dsh-file-drag
+- insert:
+    - id: dsh-file-drag
+      name: 'dsh-file-drag'
