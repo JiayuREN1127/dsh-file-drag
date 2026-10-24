@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "title": {
+    "en": "dsh-file-drag",
+    "zh": "dsh-file-drag"
+  },
+  "description": {
+    "en": "Drag files from the DeepSeek Harness Files pane into the message composer."
+  },
+  "metadata": {
+    "categories": {},
+    "labels": {},
+    "sortKeys": {}
+  },
+  "plugins": [
+    {
+      "name": "dsh-file-drag",
+      "title": {
+        "en": "dsh-file-drag",
+        "zh": "文件拖进输入框"
+      },
+      "description": {
+        "en": "Drag files and folders from the right-hand Files pane into the message composer as inline chips, attachment cards or @ mentions.",
+        "zh": "把右侧文件区的文件拖进输入框，变成句中的内嵌小卡片、附件卡片或 @ 路径。"
+      },
+      "author": "Jiayu REN",
+      "homepage": "https://github.com/JiayuREN1127/dsh-file-drag#readme",
+      "repository": {
+        "url": "https://github.com/JiayuREN1127/dsh-file-drag"
+      },
+      "metadata": {
+        "keywords": [
+          "drag",
+          "drop",
+          "files",
+          "composer",
+          "chip",
+          "mention"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.4.0",
+          "publishTimestamp": 1792841500,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/JiayuREN1127/dsh-file-drag",
+            "commit": "40f36d12c4127d477fae20c45a522646cbebcdc4"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2"
+          }
+        }
+      ]
+    }
+  ]
+}

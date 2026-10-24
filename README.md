@@ -32,6 +32,16 @@ cd dsh-file-drag
 ./install.sh
 ```
 
+### From a market index
+
+The repository also publishes a format-1 market index. Add this URL under
+**Settings → Plugins → Discover → Index sources** to install and update the plugin
+from there:
+
+```
+https://raw.githubusercontent.com/JiayuREN1127/dsh-file-drag/main/market/index.json
+```
+
 `install.sh` copies the package into `~/.dsh/profiles/desktop/node_modules/dsh-file-drag` and appends one Loader row to `~/.dsh/profiles/desktop/cordis.patch.yml`, keeping a timestamped backup of that file first.
 
 To install by hand, do the same two things:
