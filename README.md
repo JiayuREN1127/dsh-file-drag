@@ -4,7 +4,7 @@ Drag files and folders from the DeepSeek Harness **Files** sidebar straight into
 
 DeepSeek Harness already accepts file drags that come from the operating system, but its Sidebar Files pane has no drag source at all, and the composer only claims drags whose payload type is `Files`. This plugin closes that gap from the outside: it arms the existing file rows, carries the relative path over a private MIME type, and then hands the result to the composer through its own insertion paths.
 
-![Dragging install.sh from the Files pane and dropping it into a sentence](docs/inline-chip.png)
+![Dragging install.sh from the Files pane and dropping it into the sentence](docs/demo.gif)
 
 ## Requirements
 
