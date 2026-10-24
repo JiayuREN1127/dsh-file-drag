@@ -1,8 +1,8 @@
 {
   "name": "dsh-file-drag",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Drag files and folders from the DeepSeek Harness Sidebar Files pane into the composer as @ mentions.",
+  "description": "Drag files and folders from the DeepSeek Harness Sidebar Files pane into the composer, as attachment cards or @ mentions.",
   "keywords": [
     "dsh",
     "dsh-plugin",
@@ -28,7 +28,10 @@
   "dsh": {
     "client": {
       "platform": "web",
-      "inject": []
+      "inject": [],
+      "external": [
+        "react"
+      ]
     }
   },
   "files": [
