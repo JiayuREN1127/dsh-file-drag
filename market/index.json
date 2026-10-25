@@ -41,11 +41,12 @@
       "versions": [
         {
           "version": "0.4.0",
-          "publishTimestamp": 1792841500,
+          "publishTimestamp": 1792990400,
           "source": {
-            "type": "git",
-            "url": "https://github.com/JiayuREN1127/dsh-file-drag",
-            "commit": "40f36d12c4127d477fae20c45a522646cbebcdc4"
+            "type": "npm",
+            "name": "dsh-file-drag",
+            "version": "0.4.0",
+            "registry": "https://registry.npmjs.org"
           },
           "engines": {
             "dsh": ">=0.2.1-rc.2"
