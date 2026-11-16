@@ -1,0 +1,53 @@
+name: Publish
+
+# Publishes the package to npm through trusted publishing (OIDC): the runner proves
+# its identity to the registry, so no token or one-time password is involved. The
+# npm package must list this repository and this workflow file under
+# Settings -> Trusted publishing, or the registry rejects the request.
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag to publish, for example v0.4.1
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write # the OIDC claim npm verifies
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      # A registry token in this environment would make npm skip the OIDC exchange.
+      - name: Confirm the manifest version matches the tag
+        run: |
+          node -e '
+            const manifest = require("./package.json");
+            const tag = process.env.GITHUB_REF_NAME.replace(/^v/, "");
+            const requested = process.env.INPUT_TAG;
+            const expected = (requested || tag).replace(/^v/, "");
+            if (manifest.version !== expected) {
+              console.error(`package.json is ${manifest.version} but the tag is ${expected}`);
+              process.exit(1);
+            }
+            if (manifest.private === true) {
+              console.error("package.json is private");
+              process.exit(1);
+            }
+            console.log(`publishing ${manifest.name}@${manifest.version}`);
+          '
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+      - run: npm publish --access public --provenance
